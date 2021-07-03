@@ -1,9 +1,11 @@
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createStackNavigator } from 'react-navigation-stack'; 
 import Home from "../components/home"; 
 import Registration from "../components/registration"; 
 import Login from "../components/login";
 import ForgotPassword from "../components/ForgotPassword";
+import Blog from "../components/blog";
+import Cart from "../components/cart";
 
 const screens = {
     Home: {
@@ -22,7 +24,16 @@ const screens = {
         screen: ForgotPassword,
         navigationOptions: {headerShown: false} 
     },
+    Blog: {
+        screen: Blog,
+        navigationOptions: {headerShown: false} 
+    },
+    Cart: {
+        screen: Cart,
+        navigationOptions: {headerShown: false} 
+    },
 }
+
 
 const mainScreen = createStackNavigator(screens);
 export default createAppContainer(mainScreen);
